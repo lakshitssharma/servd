@@ -285,7 +285,7 @@ Guidelines:
         servings: Number(recipeData.servings),
         nutrition: recipeData.nutrition,
         tips: recipeData.tips,
-        substitutions: recipeData.substitutions,
+        // substitutions: recipeData.substitutions,
         imageUrl: imageUrl || "",
         isPublic: true,
         author: user.id,
