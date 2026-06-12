@@ -8,7 +8,7 @@ import { neobrutalism } from '@clerk/ui/themes'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Servd - AI Recipes Platform",
+  title: "Cookd - AI Recipes Platform",
   description: "AI Powered Recipe platform for developers",
 };
 
