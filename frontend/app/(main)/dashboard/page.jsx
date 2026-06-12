@@ -167,26 +167,31 @@ export default async function DashboardPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {Array.from(new Map(areas.map(area => [area.strArea, area])).values())
-              .map((area) => (
-                <Link
-                  key={area.strArea}
-                  href={`/recipes/cuisine/${area.strArea
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                >
-                  <div className="bg-stone-50 p-5 border-2 border-stone-200 hover:border-orange-600 hover:shadow-lg transition-all group cursor-pointer">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl">
-                        {getCountryFlag(area.strArea)}
-                      </span>
-                      <span className="font-bold text-stone-900 group-hover:text-orange-600 transition-colors text-sm">
-                        {area.strArea}
-                      </span>
-                    </div>
+            {[
+              "American", "British", "Canadian", "Chinese", "Croatian", "Dutch",
+              "Egyptian", "Filipino", "French", "Greek", "Indian", "Irish",
+              "Italian", "Jamaican", "Japanese", "Kenyan", "Malaysian", "Mexican",
+              "Moroccan", "Polish", "Portuguese", "Russian", "Spanish", "Thai",
+              "Tunisian", "Turkish", "Ukrainian", "Vietnamese", "Algerian",
+              "Argentinian", "Australian", "Norwegian", "Saudi Arabian", "Slovakian",
+              "Syrian", "Uruguayan", "Venezuelan"
+            ].map((country) => (
+              <Link
+                key={country}
+                href={`/recipes/cuisine/${country.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                <div className="bg-stone-50 p-5 border-2 border-stone-200 hover:border-orange-600 hover:shadow-lg transition-all group cursor-pointer">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">
+                      {getCountryFlag(country)}
+                    </span>
+                    <span className="font-bold text-stone-900 group-hover:text-orange-600 transition-colors text-sm">
+                      {country}
+                    </span>
                   </div>
-                </Link>
-              ))}
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       </div>
